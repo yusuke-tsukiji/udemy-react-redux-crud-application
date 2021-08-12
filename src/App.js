@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
     return <div>Hi! I am {props.name}, and {props.age} years old!</div>
   }
 
-  User.defaultProps = {
-    age: 1
+  User.propTypes = {
+    name: PropTypes.string,
+    age: PropTypes.number.isRequired
   }
 
   return (
